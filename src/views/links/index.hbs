@@ -1,0 +1,339 @@
+<div class="conten">
+
+    <!-- Modulo 1 -->
+    <div class="modulo">
+        {{>navigations}}
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8 mx-auto text-center ">
+                    <h1>Estamos trabajando para traerte una pagina acorde con todas tus expectativas. </h1>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-9 mx-auto text-center p-4">
+                    <h3>Siguenos en linea. </h3>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-9 mx-auto text-center p-4" id="Redes">
+                    <a href="" class="h4-4 mr-3"><i class="fab fa-instagram"></i></a>
+                    <a href="" class="h4 mr-3"><i class="fab fa-twitter"></i></a>
+                    <a href="" class="h4 mr-3"><i class="fab fa-facebook-f"></i></a>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- Modulo 2 -->
+
+    <div class="modulo2">
+        <div class="container" id="modulo2">
+            <div class="row">
+                <div class="col-md-9 mx-auto text-center">
+                    <h1 class="">Plataforma manejada por el admin, si ya tienes usuario inicia sesion.</h1>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6 mx-auto text-center p-4">
+                    <a class="" href="#" data-toggle="modal" data-target="#login">Log In</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modulo 3 -->
+    <div class="modulo3">
+        <div class="container" id="modulo3">
+            <div class="row">
+                <div class="col-md-9 mx-auto text-center">
+                    <h1 class="">Si quieres formar parte de nuestro equipo de trabajo, Registrate ya!!!!.</h1>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6 mx-auto text-center p-4">
+                    <a href="#" data-toggle="modal" data-target="#signUp">Sign Up</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modulo 3 -->
+    <div class="modulo4">
+        <div class="container" id="modulo4">
+
+        </div>
+    </div>
+
+</div>
+
+<!-- Modal login -->
+<div class="modal fade" id="login" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-body">
+                <div class="container">
+                    <img src="../images/3410492.png" class="logo ml-3" alt="">
+                    <h1 class="text-center p-3 ml-3">FumGas</h1>
+                    <form>
+                        <!-- Usuario -->
+                        <div class="row">
+                            <div class="col-md-12 text-center p-2 ">
+                                <input type="text" placeholder="User" required>
+                                <div class="invalid-feedback">
+                                    Looks good!
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <div class="row">
+                            <!-- Contraseña -->
+                            <div class="col-md-12  text-center p-2">
+                                <input type="Password" placeholder="Password" required>
+                                <div class="invalid-feedback">
+                                    Looks good!
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <!-- Contraseña -->
+                            <div class="col-md-12 text-center p-2">
+                                <div class="custom-control custom-switch">
+                                    <input type="checkbox" class="custom-control-input" id="customSwitch1" required>
+                                    <label class="custom-control-label" for="customSwitch1">Remenberme</label>
+                                    <div class="invalid-feedback">
+                                        You must agree before submitting.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Boton -->
+                        <div class="row">
+                            <div class="col-md-12  text-center p-2">
+                                <input type="submit" value="Login">
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-12  text-center p-2">
+                                <a href="" data-dismiss="modal" data-toggle="modal" data-target="#recover">Lost your
+                                    password?</a>
+                            </div>
+
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12  text-center p-2">
+                                <a href="" data-dismiss="modal" data-toggle="modal" data-target="#signUp">You want to
+                                    register?</a>
+                            </div>
+
+                        </div>
+
+
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal signUp-->
+<div class="modal fade" id="signUp" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-body">
+                <div class="container">
+                    <img src="../images/3410492.png" class="logo ml-3" alt="">
+                    <h1 class="text-center p-3 ml-3">FumGas</h1>
+                    <form action="/links/index" method="POST">
+                        <!-- Usuario -->
+                        <div class="row">
+                            <div class="col-md-12 text-center ml-5  ">
+                                <input type="text" class="form-control" name="Username" placeholder="Username" autofocus required>
+                                <div class="invalid-feedback">
+                                    Looks good!
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-12 text-center ml-5 ">
+                                <input type="email" class="form-control" name="Email" placeholder="Email">
+                            </div>
+
+                        </div>
+
+                        <div class="row">
+                            <!-- Contraseña -->
+                            <div class="col-md-12  text-center ml-5">
+                                <input type="Password" class="form-control" name="Password" placeholder="Password" required>
+                                <div class="invalid-feedback">
+                                    Looks good!
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-12 text-center ml-5 ">
+                                <input type="text" class="form-control" name="Nombre" placeholder="Name" required>
+                                <div class="invalid-feedback">
+                                    Looks good!
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12 text-center ml-5 ">
+                                <input type="text" class="form-control" name="Apellido" placeholder="Last Name" required>
+                                <div class="invalid-feedback">
+                                    Looks good!
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-12 text-center ml-5 ">
+                                <input type="text" class="form-control" name="Cedula" placeholder="IdCard" required>
+                                <div class="invalid-feedback">
+                                    Looks good!
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-12 text-center ml-5 ">
+                                <input type="text" class="form-control" name="Telefono" placeholder="Phone" required>
+                                <div class="invalid-feedback">
+                                    Looks good!
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-12 ml-5 ml-5">
+                                <div class="custom-control custom-radio custom-control-inline">
+                                    <input type="radio" id="customRadioInline1" name="customRadioInline1"
+                                        class="custom-control-input">
+                                    <label class="custom-control-label" for="customRadioInline1">Woman</label>
+                                </div>
+                                <div class="custom-control custom-radio custom-control-inline text-center">
+                                    <input type="radio" id="customRadioInline2" name="customRadioInline1"
+                                        class="custom-control-input">
+                                    <label class="custom-control-label" for="customRadioInline2">Man</label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-12 text-center ml-5">
+                                <input type="text" class="form-control" id="City" name="Ciudad" placeholder="City" required>
+                                <div class="invalid-feedback">
+                                    Please provide a valid city.
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-12 text-center p-2 ">
+                                <select class="custom-select" name="Estado" id="State" required>
+                                    <option selected disabled value="">State</option>
+                                    <option>Amazonas</option>
+                                    <option>Anzoátegui</option>
+                                    <option>Apure</option>
+                                    <option>Aragua</option>
+                                    <option>Barinas</option>
+                                    <option>Bolívar</option>
+                                </select>
+                                <div class="invalid-feedback">
+                                    Please select a valid state.
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-12 text-center ml-5 ">
+                                <input type="text" class="form-control" id="Town" name="Municipio" placeholder="Town" required>
+                                <div class="invalid-feedback">
+                                    Please provide a valid Town.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <!-- Terminos -->
+                            <div class="col-md-12 text-center p-2">
+                                <div class="custom-control custom-switch">
+                                    <input type="checkbox" class="custom-control-input" id="customSwitch2" required>
+                                    <label class="custom-control-label" for="customSwitch2">Accept the terms and
+                                        services.</label>
+                                    <div class="invalid-feedback">
+                                        Looks good!
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Boton -->
+                        <div class="row">
+                            <div class="col-md-12  text-center p-2">
+                                <input type="submit" value="Sign Up">
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-12  text-center p-2">
+                                <a href="" data-dismiss="modal" data-toggle="modal" data-target="#login">Already have an
+                                    account?</a>
+                            </div>
+
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal Recover account-->
+<div class="modal fade" id="recover" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-body">
+                <div class="container">
+                    <img src="../images/3410492.png" class="logo ml-3" alt="">
+                    <h1 class="text-center p-3 ml-3">FumGas</h1>
+                    <form>
+                        <div class="row">
+                            <div class="col-md-10 mx-auto">
+                                <p>Ingrese su Correo Electrónico para recuperar su contraseña y acceso a su cuenta.</p>
+                            </div>
+                        </div>
+                        <!-- Usuario -->
+                        <div class="row">
+                            <div class="col-md-12 text-center p-2 ">
+                                <input type="Email" placeholder="Email" required>
+                                <div class="invalid-feedback">
+                                    Looks good!
+                                </div>
+                            </div>
+
+                        </div>
+                        <!-- Boton -->
+                        <div class="row">
+                            <div class="col-md-12  text-center p-2">
+                                <input type="submit" value="Submit">
+                            </div>
+                        </div>
+
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

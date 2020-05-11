@@ -1,0 +1,135 @@
+body{
+    margin: 0;
+    padding: 0;
+    background: url(../images/4200.jpg)no-repeat top;
+    background-size: cover;
+    height: 100vh;
+  }
+
+  i{
+    color: #ed2750;
+  }
+  
+  #register-caja{
+    position: absolute;
+    padding: 50px;
+    background: #333;
+    color: white;
+    top: 10px;
+    box-sizing: border-box;
+    border-radius: 40px;
+  }
+  
+  .card{
+    background: #333;
+    color: white;
+    box-sizing: border-box;
+    border-radius: 20px;
+  }
+
+  #register-caja .avatar{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    position: absolute;
+    top: -50px;
+    left: calc(50% - 50px);
+  }
+
+  #register-caja h1{
+    margin: 0;
+    padding: 0 0 20px;
+    display: block;
+    font-size: 22px;
+  }
+
+  #register-caja label{
+    margin: 0;
+    padding: 3px;
+    font-size: 15px;
+    display: block;
+  }
+
+  #register-caja input[type = text],
+  #register-caja input[type = password],
+  #register-caja input[type = email]{
+  border: none;
+  border-bottom: 1px solid white;
+  background: transparent;
+  outline: none;
+  color: white;
+  height: 30px;
+  width: 100%;
+  font-size: 16px;
+}
+
+#State{
+  border: none;
+  cursor: pointer;
+  background: #333;
+  color: white;
+  border-bottom: 1px solid white;
+  height: 30px;
+  width: 100%;
+  font-size: 16px;
+}
+
+#register-caja input[type = "submit"]{
+    border: none;
+    outline: none;
+    height: 40px;
+    background: #ed2750;
+    color: white;
+    font-size: 18px;
+    border-radius: 20px;
+    width: 250px;
+    margin-left: calc(50% - (250px / 2));
+}
+.card a{
+  border: none;
+  outline: none;
+  background: #ed2750;
+  color: white;
+  font-size: 18px;
+  margin: 10px;
+  width: 90px;
+  border-radius: 20px;
+}
+
+#registro{
+  text-align: center;
+  border: none;
+  outline: none;
+  background: #ed2750;
+  color: white;
+  margin-left: 50px;
+  font-size: 18px;
+  width: 70%;
+  border-radius: 20px;
+}
+
+ .navbar{/*Estilo que se le aplica al navbar*/
+  background: #2a2a2a;/*color fondo*/
+}
+
+#navbarSupportedContent{
+  margin-left: 800px;
+}
+
+#navbarDropdown{/*Estilo aplicado al pequeño menu del navbar*/
+  background: #2a2a2a;
+  outline: 1px solid #2a2a2a;/* crea un borde dentro de la lista*/
+}
+
+#navbarDropdown a{ /*Estilo aplicado a las opciones del navbar*/
+  width: 200px;
+  color: white; /*Color de texto*/
+  text-decoration: none;/* decoracion del texto*/
+  padding: 7px;
+}
+
+#navbarDropdown a:hover{ /* crea una efecto al pasar el mouse por la lista*/
+  background: #444;
+  border-left: 5px solid #ffff;/*crea un border del lado izquierdo*/
+  transition: all 0.3s;/*le da un efecto al border tiempo del efecto*/
+}

@@ -1,0 +1,460 @@
+body{
+    margin: 0;
+    padding: 0;
+    font-family: 'Manrope', sans-serif;
+}
+.logo1{
+  width: 75px;
+  height: 75px;
+  top: -17px;
+  left: -40px;
+}
+.modulo{
+  background-image: url(../images/622.jpg) ;
+  background-size: cover;
+}
+
+#navbar{
+    background: transparent;
+    color: white ;
+}
+
+h1, h3{
+  color: white;
+}
+
+#Redes i{
+  color: black;
+  padding: 12px;
+  font-size: 25px;
+  width: 50px;
+  height: 50px;
+  -moz-border-radius: 75%;
+  -webkit-border-radius: 75%;
+  border-radius: 50%;
+  background: white;
+}
+
+p {
+  color: white;
+  cursor: default;
+  font-family: 'Franklin Gothic Medium';
+  padding: 6px;
+}
+
+#Redes i:hover{
+  color: #e540ff;
+  transition: all 0.3s;
+}
+#navbarNav a:hover{
+  color: #e540ff;
+  transition: all 0.3s;
+}
+
+.modulo2{
+  background:#F3E5F5;
+  height: 400px;
+}
+
+#modulo2 h1{
+  color: black;
+  padding-top: 70px;
+}
+
+#modulo2 a {
+  font-size: 25px;
+  text-align: center;
+  padding-left: 100PX;
+  padding-right: 100PX;
+  color: white;
+  width: 100px; 
+  height: 100px; 
+  border-radius: 20px;
+  background: black;
+  text-decoration: none;
+}
+
+#modulo2 a:hover{
+  color: white;
+  background: #e540ff;
+  transition: all 0.3s;
+}
+
+.modulo3{
+  background:#308be4;
+  height: 400px;
+}
+
+#modulo3 h1{
+  color: #EDE7F6;
+  padding-top: 70px;
+}
+
+#modulo3 a {
+  font-size: 25px;
+  text-align: center;
+  padding-left: 100PX;
+  padding-right: 100PX;
+  color: white;
+  width: 100px; 
+  height: 100px; 
+  border-radius: 20px;
+  background: black;
+  text-decoration: none;
+}
+
+#modulo3 a:hover{
+  color: #308be4;
+  background: white;
+  transition: all 0.3s;
+}
+
+.modulo4{
+  background: black;
+  height: 400px;
+}
+
+#login{
+  padding-top: 200px;
+}
+
+#login .modal-body{
+  border: none;
+  background: white;
+  border-radius: 5px;
+}
+
+#login input{
+  width: 340px;
+  font-size: 12px;
+}
+
+#login input[type = text],
+#login input[type = Password]{
+  color: black;
+  height: 35px;
+  padding: 8px;
+}
+
+#login input[type = "submit"]{
+  border: none;
+  outline: none;
+  background: black;
+  color: white;
+  height: 45px;
+  font-size: 16px;
+  border-radius: 20px;
+}
+
+#login input[type = "submit"]:hover{
+  color: white;
+  background: #e540ff;
+}
+
+#login h1{
+  color: black;
+}
+
+#login a{
+  font-size: 16px;
+  color: black;
+}
+
+#login .logo{
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  left: calc(28% - 80px);
+}
+
+#signUp{
+  padding-top: 50px;
+}
+
+#signUp .modal-body{
+  border: none;
+  background: white;
+  border-radius: 5px;
+}
+
+#signUp input{
+  width: 340px;
+  font-size: 12px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+#signUp .logo{
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  left: calc(28% - 80px);
+}
+
+#signUp h1{
+  color: black;
+}
+
+#signUp a{
+  font-size: 16px;
+  color: black;
+}
+
+#signUp input[type = text],
+#signUp input[type = Password],
+#signUp input[type = Email]{
+  color: black;
+  height: 35px;
+  padding: 8px;
+}
+
+#signUp input[type = date]{
+  color: black;
+  height: 35px;
+}
+
+#signUp label[for = text]{
+  color: #9E9E9E;
+  font-size: 12px ;
+  margin-left: 2px;
+  margin-bottom: -20px;
+}
+
+#signUp input[type = "submit"]{
+  border: none;
+  outline: none;
+  background: black;
+  color: white;
+  height: 45px;
+  font-size: 16px;
+  border-radius: 20px;
+}
+
+#signUp input[type = "submit"]:hover{
+  color: white;
+  background: #e540ff;
+}
+
+#State{
+  width: 340px;
+  font-size: 12px;
+  height: 35px;
+  padding: 8px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+#recover .modal-body{
+  border: none;
+  background: white;
+  border-radius: 5px;
+}
+
+#recover input{
+  width: 340px;
+  font-size: 12px;
+}
+
+#recover .logo{
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  left: calc(28% - 80px);
+}
+
+#recover h1{
+  color: black;
+}
+#recover p{
+  color: black;
+  margin-left: 4px;
+}
+
+#recover input[type = Email]{
+  color: black;
+  height: 35px;
+  padding: 8px;
+}
+
+#recover input[type = "submit"]{
+  border: none;
+  outline: none;
+  background: black;
+  color: white;
+  height: 45px;
+  font-size: 16px;
+  border-radius: 20px;
+}
+
+#recover input[type = "submit"]:hover{
+  color: white;
+  background: #e540ff;
+}
+
+#notify{
+  padding-top: 200px;
+}
+#notify p , 
+#notify i, 
+#notify h1{
+  color: black;
+
+}
+
+#notify .logo{
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  left: calc(28% - 80px);
+}
+
+#notify a {
+  font-size: 16px;
+  text-align: center;
+  padding-left: 50PX;
+  padding-right: 50PX;
+  padding-bottom: 10px;
+  padding-top: 10px;
+  color: white;
+  width: 100px; 
+  height: 100px; 
+  border-radius: 20px;
+  background: black;
+  text-decoration: none;
+}
+
+#notify a:hover{
+  color: white;
+  background: #308be4;
+  transition: all 0.3s;
+}
+
+#search{
+  padding-top: 200px;
+}
+#search p , 
+#search i, 
+#search h1{
+  color: black;
+
+}
+
+#search .logo{
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  left: calc(28% - 80px);
+}
+
+body {
+  overflow-x: hidden;
+}
+i{
+  Color:white ;
+}
+
+#sidebar-wrapper { /*Cuerpo del Sidebar*/
+  min-height: 100vh;
+  margin-left: -15rem;
+  -webkit-transition: margin .25s ease-out;
+  -moz-transition: margin .25s ease-out;
+  -o-transition: margin .25s ease-out;
+  transition: margin .25s ease-out;
+  background-image: url(../images/622.jpg) ;
+  background-size: cover;/*color fondo*/
+  transition: all 1s;/*le da un efecto al border tiempo del efecto*/
+}
+
+#sidebar-wrapper h2 { /*Titulo del Sidebar*/
+  padding: 40px;
+  margin: 0px;
+  height: 500px;
+  text-align: center;
+  font-size: 1.4rem;
+  color: white; 
+  background-image: url(../images/622.jpg) ;
+  background-size: cover;
+}
+
+#sidebar-wrapper ul {/*Dando forma al sidebar*/
+  width: 15rem;
+  list-style: none; /*Estilo de lista*/
+  padding: 0;
+  margin: 0;
+}
+
+#sidebar-wrapper .lista{/*Ajustando las opciones*/
+  border: none;
+}
+#sidebar-wrapper li{/*Ajustando las opciones*/
+  outline: 1px solid white;/* crea un borde dentro de la lista*/
+}
+
+#sidebar-wrapper a{/*Da estilo a las opciones*/
+  display: block; /*Crea un bloque*/
+  color: white; /*Color de texto*/
+  text-decoration: none;/* decoracion del texto*/
+  padding: 15px;
+}
+
+#sidebar-wrapper a:hover{
+  color: #e540ff;
+}
+#page-content-wrapper {/*Contenido de la pagina*/
+  min-width: 100vw;
+}
+
+#page-content-wrapper .navbar{/*Estilo que se le aplica al navbar*/
+  list-style: none;
+  margin: 0;/*margen 0*/
+  padding: 9px;
+  background-image: url(../images/622.jpg) ;
+  background-size: cover;/*color fondo*/
+}
+#page-content-wrapper a{ /* crea una efecto al pasar el mouse por la lista*/
+  color: white;
+  background: black;
+  transition: all 0.3s;/*le da un efecto al border tiempo del efecto*/
+}
+#page-content-wrapper a:hover{ /* crea una efecto al pasar el mouse por la lista*/
+  color: black;
+  background: #e540ff;
+  transition: all 0.3s;/*le da un efecto al border tiempo del efecto*/
+}
+#navbarDropdown{/*Estilo aplicado al pequeño menu del navbar*/
+  background-image: url(../images/622.jpg) ;
+  background-size: cover;/*color fondo*//* crea un borde dentro de la lista*/
+}
+
+#navbarDropdown a{ /*Estilo aplicado a las opciones del navbar*/
+  width: 200px;
+  color: white; /*Color de texto*/
+  text-decoration: none;/* decoracion del texto*/
+  padding: 7px;
+}
+
+#navbarDropdown a:hover{ /* crea una efecto al pasar el mouse por la lista*/
+  color: #e540ff;
+  background: none;
+  transition: all 0.3s;/*le da un efecto al border tiempo del efecto*/
+}
+
+#wrapper.toggled #sidebar-wrapper {/*Ajuste Aplicado al dar clic en la opcion main*/
+  margin-left: 0;
+}
+
+@media (min-width: 768px) { /*opciones ejecutadas cuando la pantalla tenga ese tamaño en PX*/
+  #sidebar-wrapper {
+    margin-left: 0;
+  }
+
+  #page-content-wrapper {
+    min-width: 0;
+    width: 100%;
+  }
+
+  #wrapper.toggled #sidebar-wrapper {
+    margin-left: -15rem;
+    transition: all 1s;/*le da un efecto al border tiempo del efecto*/
+  }
+}

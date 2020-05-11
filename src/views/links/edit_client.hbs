@@ -1,0 +1,108 @@
+<div id="page-content-wrapper">
+
+    {{>nav-sidebar}}
+
+<div class="modal-dialog" id="signUp" role="document">
+      <div class="modal-content">
+        <div class="modal-body">
+          <div class="container">
+
+        <img src="/images/3410492.png" class="logo ml-3" alt="">
+        <h1 class="text-center p-3 ml-3">FumGas</h1>
+        <h5 class="text-center ml-3">Edit Client</h5>
+
+        <form action="/links/edit_client/{{client.idCliente}}" method="POST">
+
+          <div class="row">
+            <div class="col-md-12 ml-5">
+              <input type="email" class="form-control" name="Email" value="{{client.Email}}">
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-md-12 ml-5">
+              <input type="text" class="form-control" name="Nombre" value="{{client.Nombre}}" required>
+              <div class="invalid-feedback">
+                Looks good!
+              </div>
+            </div>
+
+          </div>
+          <div class="row">
+            <div class="col-md-12 ml-5">
+              <input type="text" class="form-control" name="Apellido" value="{{client.Apellido}}" required>
+              <div class="invalid-feedback">
+                Looks good!
+              </div>
+            </div>
+
+          </div>
+
+          <div class="row">
+            <div class="col-md-12 ml-5">
+              <input type="text" class="form-control" name="Cedula" value="{{client.Cedula}}" required>
+              <div class="invalid-feedback">
+                Looks good!
+              </div>
+            </div>
+
+          </div>
+
+          <div class="row">
+            <div class="col-md-12 ml-5">
+              <input type="text" class="form-control" name="Telefono" value="{{client.Telefono}}" required>
+              <div class="invalid-feedback">
+                Looks good!
+              </div>
+            </div>
+
+          </div>
+
+          <div class="row">
+            <div class="col-md-12 ml-5">
+              <input type="text" class="form-control" id="City" name="Ciudad" placeholder="City" required>
+              <div class="invalid-feedback">
+                Please provide a valid city.
+              </div>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-md-12 ml-5">
+              <select class="custom-select" name="Estado" id="State" required>
+                <option selected disabled value="">State</option>
+                <option>Amazonas</option>
+                <option>Anzoátegui</option>
+                <option>Apure</option>
+                <option>Aragua</option>
+                <option>Barinas</option>
+                <option>Bolívar</option>
+              </select>
+              <div class="invalid-feedback">
+                Please select a valid state.
+              </div>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-md-12 ml-5">
+              <input type="text" class="form-control" id="Town" name="Municipio" placeholder="Town" required>
+              <div class="invalid-feedback">
+                Please provide a valid Town.
+              </div>
+            </div>
+          </div>
+
+          <!-- Boton -->
+          <div class="row">
+            <div class="col-md-12 ml-5">
+              <input type="submit" value="Save">
+            </div>
+          </div>
+        </form>
+
+      </div>
+    </div>
+  </div>
+</div>
+</div>
