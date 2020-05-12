@@ -76,11 +76,11 @@
                 <div class="container">
                     <img src="../images/3410492.png" class="logo ml-3" alt="">
                     <h1 class="text-center p-3 ml-3">FumGas</h1>
-                    <form>
+                    <form action="/login" method="POST">
                         <!-- Usuario -->
                         <div class="row">
                             <div class="col-md-12 text-center p-2 ">
-                                <input type="text" placeholder="User" required>
+                                <input type="text" name="Username" placeholder="User" required>
                                 <div class="invalid-feedback">
                                     Looks good!
                                 </div>
@@ -91,7 +91,7 @@
                         <div class="row">
                             <!-- Contraseña -->
                             <div class="col-md-12  text-center p-2">
-                                <input type="Password" placeholder="Password" required>
+                                <input type="Password" name="Password" placeholder="Password" required>
                                 <div class="invalid-feedback">
                                     Looks good!
                                 </div>
@@ -148,7 +148,7 @@
                 <div class="container">
                     <img src="../images/3410492.png" class="logo ml-3" alt="">
                     <h1 class="text-center p-3 ml-3">FumGas</h1>
-                    <form action="/links/index" method="POST">
+                    <form action="/singup" method="POST">
                         <!-- Usuario -->
                         <div class="row">
                             <div class="col-md-12 text-center ml-5  ">

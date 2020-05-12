@@ -413,12 +413,12 @@ i{
 }
 #page-content-wrapper a{ /* crea una efecto al pasar el mouse por la lista*/
   color: white;
-  background: black;
+  background: none;
   transition: all 0.3s;/*le da un efecto al border tiempo del efecto*/
 }
 #page-content-wrapper a:hover{ /* crea una efecto al pasar el mouse por la lista*/
-  color: black;
-  background: #e540ff;
+  color: #e540ff;
+  background: none;
   transition: all 0.3s;/*le da un efecto al border tiempo del efecto*/
 }
 #navbarDropdown{/*Estilo aplicado al pequeño menu del navbar*/
@@ -457,4 +457,15 @@ i{
     margin-left: -15rem;
     transition: all 1s;/*le da un efecto al border tiempo del efecto*/
   }
+}
+
+#page-content-wrapper .btn{
+  background: black;
+  color: white;
+}
+
+#page-content-wrapper .btn:hover{ /* crea una efecto al pasar el mouse por la lista*/
+  color: white;
+  background: #e540ff;
+  transition: all 0.3s;/*le da un efecto al border tiempo del efecto*/
 }
