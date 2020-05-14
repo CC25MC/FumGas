@@ -29,7 +29,7 @@
               <i class="fas fa-user-circle" id="user"></i>
             </a>
             <div class="dropdown-menu dropdown-menu-right" id="navbarDropdown" aria-labelledby="navbarDropdown">
-              <a class="dropdown-item" href="#">
+              <a class="dropdown-item" href="/links/edit/{{user.Id_users}}">
                 <i class="fas fa-user-edit"></i>
                 Edit
               </a>
@@ -37,6 +37,12 @@
                 <i class="fas fa-key"></i>
                 Change Password
               </a>
+              {{#isEqual user.Username}}
+              <a class="dropdown-item" href="/links/view_users">
+                <i class="fas fa-key"></i>
+                Show User
+              </a>
+              {{/isEqual}}
               <div class="dropdown-divider"></div>
               <a class="dropdown-item" href="#">
                 <i class="fas fa-question-circle"></i>

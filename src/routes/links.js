@@ -33,7 +33,8 @@ router.post('/register_client', async (req, res) => {
         Email,
         Telefono
     }
-    await poll.query('INSERT INTO direccion set ?', [newDirecction])
+    const result = await poll.query('INSERT INTO direccion set ?', [newDirecction])
+    newClient.Direccion_idDireccion = result.insertId
     await poll.query('INSERT INTO clientes set ?', [newClient])
     req.flash('success', 'Cliente Registrado Con Exito')
     res.redirect('./view_client')
@@ -57,7 +58,10 @@ router.get('/delete/:Id_users', isLoggedIn, async (req, res) => {
     const {
         Id_users
     } = req.params
+    const result = await poll.query('SELECT * FROM users WHERE Id_users = ?', Id_users)
+    const direccion = result[0].Direccion_idDireccion
     await poll.query('DELETE FROM users WHERE Id_users = ?', Id_users)
+    await poll.query('DELETE FROM direccion WHERE idDireccion = ?', direccion)
     req.flash('success', 'Usuario Eliminado Con Exito')
     res.redirect('../view_users')
 })
@@ -66,26 +70,38 @@ router.get('/delet/:idCliente', isLoggedIn, async (req, res) => {
     const {
         idCliente
     } = req.params
+    const result = await poll.query('SELECT * FROM clientes WHERE idCliente = ?', idCliente)
+    const direccion = result[0].Direccion_idDireccion
     await poll.query('DELETE FROM clientes WHERE idCliente = ?', idCliente)
+    await poll.query('DELETE FROM direccion WHERE idDireccion = ?', direccion)
+    console.log(direccion)
     req.flash('success', 'Cliente Eliminado Con Exito')
     res.redirect('../view_client')
 })
 
-router.get('/edit/:Id_users', isLoggedIn, async (req, res) => {
+router.get('/edit/:Id_users/:Direccion_idDireccion', isLoggedIn, async (req, res) => {
     const {
         Id_users
     } = req.params
     const user = await poll.query('SELECT * FROM users WHERE Id_users = ?', Id_users)
+    const direccion =  await poll.query('SELECT * FROM direccion WHERE idDireccion = ?', user[0].Direccion_idDireccion)
+    user[0].Estado = direccion[0].Estado
+    user[0].Municipio = direccion[0].Municipio
+    user[0].Ciudad = direccion[0].Ciudad
     res.render('links/edit', {
         user: user[0]
     })
 })
 
-router.get('/edit_client/:idCliente', isLoggedIn, async (req, res) => {
+router.get('/edit_client/:idCliente/:Direccion_idDireccion', isLoggedIn, async (req, res) => {
     const {
         idCliente
     } = req.params
     const client = await poll.query('SELECT * FROM clientes WHERE idCliente = ?', idCliente)
+    const direccion =  await poll.query('SELECT * FROM direccion WHERE idDireccion = ?', client[0].Direccion_idDireccion)
+    client[0].Estado = direccion[0].Estado
+    client[0].Municipio = direccion[0].Municipio
+    client[0].Ciudad = direccion[0].Ciudad
     res.render('links/edit_client', {
         client: client[0]
     })
@@ -99,22 +115,33 @@ router.post('/client',  async (req, res) => {
     const {
         Cedula
     } = req.body
+    
     const client = await poll.query('SELECT * FROM clientes WHERE Cedula = ?', Cedula)
+    if(client[0]){
+    const direccion = await poll.query('SELECT * FROM direccion WHERE idDireccion = ?', client[0].Direccion_idDireccion)
+    client[0].Estado = direccion[0].Estado
+    client[0].Municipio = direccion[0].Municipio
+    client[0].Ciudad = direccion[0].Ciudad
+    }
     res.render('links/client', {
         client
     })
 })
 
-router.post('/edit/:Id_users', async (req, res) => {
+router.post('/edit/:Id_users/:Direccion_idDireccion', async (req, res) => {
     const {
-        Id_users
+        Id_users,
+        Direccion_idDireccion
     } = req.params
     const {
         Cedula,
         Nombre,
         Apellido,
         Email,
-        Telefono
+        Telefono,
+        Estado,
+        Municipio,
+        Ciudad
     } = req.body
 
     const newUserEdit = {
@@ -124,21 +151,32 @@ router.post('/edit/:Id_users', async (req, res) => {
         Email,
         Telefono
     }
+    const newDirecction = {
+        Estado,
+        Municipio,
+        Ciudad
+    }
+    await poll.query('UPDATE direccion set ? WHERE idDireccion = ?', [newDirecction,Direccion_idDireccion])
     await poll.query('UPDATE users set ? WHERE Id_users = ?', [newUserEdit, Id_users])
+    
     req.flash('success', 'Usuario Actualizado Con Exito')
-    res.redirect('../view_users')
+    res.redirect('../../view_users')
 })
 
-router.post('/edit_client/:idCliente', async (req, res) => {
+router.post('/edit_client/:idCliente/:Direccion_idDireccion', async (req, res) => {
     const {
-        idCliente
+        idCliente,
+        Direccion_idDireccion
     } = req.params
     const {
         Cedula,
         Nombre,
         Apellido,
         Email,
-        Telefono
+        Telefono,
+        Estado,
+        Municipio,
+        Ciudad
     } = req.body
 
     const newclientEdit = {
@@ -148,9 +186,16 @@ router.post('/edit_client/:idCliente', async (req, res) => {
         Email,
         Telefono
     }
+
+    const newDirecction = {
+        Estado,
+        Municipio,
+        Ciudad
+    }
+    await poll.query('UPDATE direccion set ? WHERE idDireccion = ?', [newDirecction,Direccion_idDireccion])
     await poll.query('UPDATE clientes set ? WHERE idCliente = ?', [newclientEdit, idCliente])
     req.flash('success', 'Cliente Actualizado Con Exito')
-    res.redirect('../view_client')
+    res.redirect('../../view_client')
 })
 
 module.exports = router

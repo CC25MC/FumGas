@@ -9,123 +9,134 @@
     {{>nav-sidebar}}
 
     <!-- Contenido -->
-      <div class="modal-dialog" id="signUp" role="document">
-        <div class="modal-content">
-          <div class="modal-body">
-            <div class="container">
-              <img src="../images/3410492.png" class="logo ml-3" alt="">
-              <h1 class="text-center p-3 ml-3">FumGas</h1>
-              <form action="/links/register_client" method="POST">
-                
-                <div class="row">
-                  <div class="col-md-12 text-center ml-5 ">
-                    <input type="email" class="form-control" name="Email" placeholder="Email">
-                  </div>
 
+    <div class="container p-4">
+      <div class="row">
+        <div class="text-center mb-2">
+          <a href="#" class="btn" data-toggle="modal" data-target="#search">Search</a>
+          <a href="/links/register_client" class="btn">Register</a>
+          <a href="/links/view_client" class="btn ">Show client</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal-dialog" id="signUp" role="document">
+      <div class="modal-content">
+        <div class="modal-body">
+          <div class="container">
+            <img src="../images/3410492.png" class="logo ml-3" alt="">
+            <h1 class="text-center p-3 ml-3">FumGas</h1>
+            <form action="/links/register_client" method="POST">
+
+              <div class="row">
+                <div class="col-md-12 text-center ml-5 ">
+                  <input type="email" class="form-control" name="Email" placeholder="Email">
                 </div>
 
-                <div class="row">
-                  <div class="col-md-12 text-center ml-5 ">
-                    <input type="text" class="form-control" name="Nombre" placeholder="Name" required>
-                    <div class="invalid-feedback">
-                      Looks good!
-                    </div>
-                  </div>
+              </div>
 
-                </div>
-                <div class="row">
-                  <div class="col-md-12 text-center ml-5 ">
-                    <input type="text" class="form-control" name="Apellido" placeholder="Last Name" required>
-                    <div class="invalid-feedback">
-                      Looks good!
-                    </div>
-                  </div>
-
-                </div>
-
-                <div class="row">
-                  <div class="col-md-12 text-center ml-5 ">
-                    <input type="text" class="form-control" name="Cedula" placeholder="IdCard" required>
-                    <div class="invalid-feedback">
-                      Looks good!
-                    </div>
-                  </div>
-
-                </div>
-
-                <div class="row">
-                  <div class="col-md-12 text-center ml-5 ">
-                    <input type="text" class="form-control" name="Telefono" placeholder="Phone" required>
-                    <div class="invalid-feedback">
-                      Looks good!
-                    </div>
-                  </div>
-
-                </div>
-
-                <div class="row">
-                  <div class="col-md-12 ml-5 ml-5">
-                    <div class="custom-control custom-radio custom-control-inline">
-                      <input type="radio" id="customRadioInline1" name="customRadioInline1"
-                        class="custom-control-input">
-                      <label class="custom-control-label" for="customRadioInline1">Company</label>
-                    </div>
-                    <div class="custom-control custom-radio custom-control-inline text-center">
-                      <input type="radio" id="customRadioInline2" name="customRadioInline1"
-                        class="custom-control-input">
-                      <label class="custom-control-label" for="customRadioInline2">House</label>
-                    </div>
+              <div class="row">
+                <div class="col-md-12 text-center ml-5 ">
+                  <input type="text" class="form-control" name="Nombre" placeholder="Name" required>
+                  <div class="invalid-feedback">
+                    Looks good!
                   </div>
                 </div>
 
-                <div class="row">
-                  <div class="col-md-12 text-center ml-5">
-                    <input type="text" class="form-control" id="City" name="Ciudad" placeholder="City" required>
-                    <div class="invalid-feedback">
-                      Please provide a valid city.
-                    </div>
+              </div>
+              <div class="row">
+                <div class="col-md-12 text-center ml-5 ">
+                  <input type="text" class="form-control" name="Apellido" placeholder="Last Name" required>
+                  <div class="invalid-feedback">
+                    Looks good!
                   </div>
                 </div>
 
-                <div class="row">
-                  <div class="col-md-12 text-center p-2 ">
-                    <select class="custom-select" name="Estado" id="State" required>
-                      <option selected disabled value="">State</option>
-                      <option>Amazonas</option>
-                      <option>Anzoátegui</option>
-                      <option>Apure</option>
-                      <option>Aragua</option>
-                      <option>Barinas</option>
-                      <option>Bolívar</option>
-                    </select>
-                    <div class="invalid-feedback">
-                      Please select a valid state.
-                    </div>
+              </div>
+
+              <div class="row">
+                <div class="col-md-12 text-center ml-5 ">
+                  <input type="text" class="form-control" name="Cedula" placeholder="IdCard" required>
+                  <div class="invalid-feedback">
+                    Looks good!
                   </div>
                 </div>
 
-                <div class="row">
-                  <div class="col-md-12 text-center ml-5 ">
-                    <input type="text" class="form-control" id="Town" name="Municipio" placeholder="Town" required>
-                    <div class="invalid-feedback">
-                      Please provide a valid Town.
-                    </div>
-                  </div>
-                </div>
-      
-                <!-- Boton -->
-                <div class="row">
-                  <div class="col-md-12  text-center p-2">
-                    <input type="submit" value="Sign Up">
+              </div>
+
+              <div class="row">
+                <div class="col-md-12 text-center ml-5 ">
+                  <input type="text" class="form-control" name="Telefono" placeholder="Phone" required>
+                  <div class="invalid-feedback">
+                    Looks good!
                   </div>
                 </div>
 
-              </form>
-            </div>
+              </div>
+
+              <div class="row">
+                <div class="col-md-12 ml-5 ml-5">
+                  <div class="custom-control custom-radio custom-control-inline">
+                    <input type="radio" id="customRadioInline1" name="customRadioInline1" class="custom-control-input">
+                    <label class="custom-control-label" for="customRadioInline1">Company</label>
+                  </div>
+                  <div class="custom-control custom-radio custom-control-inline text-center">
+                    <input type="radio" id="customRadioInline2" name="customRadioInline1" class="custom-control-input">
+                    <label class="custom-control-label" for="customRadioInline2">House</label>
+                  </div>
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="col-md-12 text-center ml-5">
+                  <input type="text" class="form-control" id="City" name="Ciudad" placeholder="City" required>
+                  <div class="invalid-feedback">
+                    Please provide a valid city.
+                  </div>
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="col-md-12 text-center p-2 ">
+                  <select class="custom-select" name="Estado" id="State" required>
+                    <option selected disabled value="">State</option>
+                    <option>Amazonas</option>
+                    <option>Anzoátegui</option>
+                    <option>Apure</option>
+                    <option>Aragua</option>
+                    <option>Barinas</option>
+                    <option>Bolívar</option>
+                  </select>
+                  <div class="invalid-feedback">
+                    Please select a valid state.
+                  </div>
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="col-md-12 text-center ml-5 ">
+                  <input type="text" class="form-control" id="Town" name="Municipio" placeholder="Town" required>
+                  <div class="invalid-feedback">
+                    Please provide a valid Town.
+                  </div>
+                </div>
+              </div>
+
+              <!-- Boton -->
+              <div class="row">
+                <div class="col-md-12  text-center p-2">
+                  <input type="submit" value="Sign Up">
+                </div>
+              </div>
+
+            </form>
           </div>
         </div>
       </div>
+    </div>
   </div>
   <!-- /#page-content-wrapper -->
 
 </div>
+
+{{>search}}

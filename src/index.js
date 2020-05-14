@@ -6,6 +6,7 @@ const flash = require('connect-flash')
 const session = require('express-session')
 const MySQLStore = require('express-mysql-session')
 const passport = require('passport')
+const handlebars = require("handlebars")
 const {
     database
 } = require('./keys')
@@ -49,6 +50,9 @@ app.use((req, res, next) => {
     app.locals.user = req.user
     next()
 })
+handlebars.registerHelper('isEqual', (a, opts) => {
+    return a == 'CC25MC' ? opts.fn(this) : opts.inverse(this);
+});
 
 //Routes
 app.use(require('./routes'))

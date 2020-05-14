@@ -3,9 +3,9 @@ const router = express.Router()
 
 
 const passport = require('passport')
-const { isLoggedIn} = require('../lib/auth')
+const { isLoggedIn, isNotLoggedIn} = require('../lib/auth')
 
-router.get('/index', (req, res) => {
+router.get('/index', isNotLoggedIn , (req, res) => {
     res.render('auth/index')
 })
 

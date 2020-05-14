@@ -11,7 +11,7 @@
         <h1 class="text-center p-3 ml-3">FumGas</h1>
         <h5 class="text-center ml-3">Edit Client</h5>
 
-        <form action="/links/edit_client/{{client.idCliente}}" method="POST">
+        <form action="/links/edit_client/{{client.idCliente}}/{{client.Direccion_idDireccion}}" method="POST">
 
           <div class="row">
             <div class="col-md-12 ml-5">
@@ -60,7 +60,7 @@
 
           <div class="row">
             <div class="col-md-12 ml-5">
-              <input type="text" class="form-control" id="City" name="Ciudad" placeholder="City" required>
+              <input type="text" class="form-control" id="City" name="Ciudad" value="{{client.Ciudad}}" required>
               <div class="invalid-feedback">
                 Please provide a valid city.
               </div>
@@ -69,7 +69,7 @@
 
           <div class="row">
             <div class="col-md-12 ml-5">
-              <select class="custom-select" name="Estado" id="State" required>
+              <select class="custom-select" name="Estado" id="State" value="{{client.Estado}}" required>
                 <option selected disabled value="">State</option>
                 <option>Amazonas</option>
                 <option>Anzoátegui</option>
@@ -86,7 +86,7 @@
 
           <div class="row">
             <div class="col-md-12 ml-5">
-              <input type="text" class="form-control" id="Town" name="Municipio" placeholder="Town" required>
+              <input type="text" class="form-control" id="Town" name="Municipio" value="{{client.Municipio}}" required>
               <div class="invalid-feedback">
                 Please provide a valid Town.
               </div>
