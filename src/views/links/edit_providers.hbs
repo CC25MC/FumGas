@@ -1,0 +1,67 @@
+<div id="page-content-wrapper">
+
+    {{>nav-sidebar}}
+
+    <div class="modal-dialog" id="signUp" role="document">
+        <div class="modal-content">
+            <div class="modal-body">
+                <div class="container">
+
+                    <img src="/images/3410492.png" class="logo ml-3" alt="">
+                    <h1 class="text-center p-3 ml-3">FumGas</h1>
+                    <h5 class="text-center ml-3">Edit Providers</h5>
+
+                    <form action="/links/edit_providers/{{providers.idProveedores}}" method="POST">
+
+                        <div class="container ml-4">
+                            <div class="row mt-4">
+                                <div class="col-md-12 ">
+                                    <input type="text" class="form-control" name="Nombre" value="{{providers.Nombre}}"
+                                        required>
+                                    <div class="invalid-feedback">
+                                        Looks good!
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-12  ">
+                                    <input type="text" class="form-control" name="Rif" value="{{providers.Rif}}"
+                                        required>
+                                    <div class="invalid-feedback">
+                                        Looks good!
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-12  ">
+                                    <input type="Email" class="form-control" name="Email" value="{{providers.Email}}"
+                                        required>
+                                    <div class="invalid-feedback">
+                                        Looks good!
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-md-12 ">
+                                    <input type="text" class="form-control" name="Telefono"
+                                        value="{{providers.Telefono}}" required>
+                                    <div class="invalid-feedback">
+                                        Looks good!
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Boton -->
+                            <div class="row">
+                                <div class="col-md-12 mt-3">
+                                    <input type="submit" value="Save">
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

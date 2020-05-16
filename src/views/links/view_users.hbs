@@ -30,6 +30,7 @@
 
           <tbody>
             {{#each users}}
+            
             <tr>
               <th scope="row">{{Id_users}}</th>
               <td>{{Username}}</td>
@@ -41,7 +42,11 @@
               <td>{{Direccion_idDireccion}}</td>
               <td>{{timeago Fecha_registro}}</td>
               <td><a class="btn" href="/links/edit/{{Id_users}}/{{Direccion_idDireccion}}">Edit</a></td>
+              {{#isEqual Username}}
+              
+              {{else}}
               <td><a class="btn" href="/links/delete/{{Id_users}}">delete</a></td>
+              {{/isEqual}}
             </tr>
             {{else}}
             <div class="modal" id="notify" tabindex="-1" role="dialog">
